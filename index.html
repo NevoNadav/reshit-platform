@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reshit - AI-Powered Jewish Digital Platform</title>
+  <meta name="description" content="Reshit is an AI-powered Jewish digital platform for prayer, Torah learning, halacha, zmanim, Jewish calendar tools and Hebrew-first digital Judaism." />
+  <meta name="keywords" content="Reshit, Reshit app, Jewish app, AI Jewish app, Jewish digital platform, Jewish technology, digital Judaism, Torah app, Halacha app, Siddur app, Zmanim app, Hebrew RTL app, ראשית, אפליקציה יהודית, בינה מלאכותית יהודית" />
+  <meta name="author" content="Nevo Nadav" />
+  <link rel="canonical" href="https://nevonadav.github.io/reshit-platform/" />
+
+  <meta property="og:title" content="Reshit - AI-Powered Jewish Digital Platform" />
+  <meta property="og:description" content="A modern Hebrew-first Jewish platform connecting Torah, prayer, halacha, zmanim and AI-powered Jewish learning." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nevonadav.github.io/reshit-platform/" />
+  <meta property="og:site_name" content="Reshit" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reshit - AI-Powered Jewish Digital Platform" />
+  <meta name="twitter:description" content="Jewish tradition meets modern AI, Hebrew-first design and digital accessibility." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Reshit",
+    "alternateName": "ראשית",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Web, iOS, Android",
+    "description": "Reshit is an AI-powered Jewish digital platform for prayer, Torah learning, halacha, zmanim, Jewish calendar tools and Hebrew-first digital Judaism.",
+    "url": "https://reshit.app",
+    "creator": {
+      "@type": "Person",
+      "name": "Nevo Nadav"
+    },
+    "keywords": "Jewish app, AI Jewish app, Jewish digital platform, Torah app, Halacha app, Siddur app, Zmanim app, Hebrew RTL app, ראשית"
+  }
+  </script>
+
+  <style>
+    :root {
+      --gold: #b6863a;
+      --brown: #905f36;
+      --cream: #ecd9b8;
+      --white: #ffffff;
+      --ink: #16130f;
+      --muted: #6e6254;
+      --card: rgba(255,255,255,0.78);
+      --border: rgba(182,134,58,0.25);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #fff7e8, #ffffff 35%, #f6eee1 100%);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 32px;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding: 18px 0 64px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: 22px;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--gold), var(--brown));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      box-shadow: 0 16px 40px rgba(144,95,54,0.25);
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 54px;
+      align-items: center;
+      padding-bottom: 76px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.62);
+      color: var(--brown);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 84px);
+      line-height: 0.95;
+      letter-spacing: -0.075em;
+      margin: 0 0 24px;
+    }
+
+    .lead {
+      font-size: clamp(18px, 2vw, 23px);
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 0 34px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--border);
+    }
+
+    .primary {
+      background: var(--ink);
+      color: white;
+      border-color: var(--ink);
+    }
+
+    .secondary {
+      background: rgba(255,255,255,0.72);
+      color: var(--ink);
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      padding: 28px;
+      box-shadow: 0 30px 90px rgba(144,95,54,0.18);
+      backdrop-filter: blur(20px);
+    }
+
+    .panel h2 {
+      margin: 0 0 12px;
+      font-size: 26px;
+      letter-spacing: -0.04em;
+    }
+
+    .panel p {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .hebrew-card {
+      direction: rtl;
+      text-align: right;
+      background: linear-gradient(145deg, #ffffff, #f5ead8);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 22px;
+      margin-top: 18px;
+    }
+
+    .hebrew-card strong {
+      display: block;
+      font-size: 28px;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      padding: 22px 0 72px;
+    }
+
+    .feature {
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 22px;
+    }
+
+    .feature h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+      letter-spacing: -0.035em;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .section {
+      padding: 52px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      margin: 0 0 18px;
+      letter-spacing: -0.055em;
+    }
+
+    .section p {
+      color: var(--muted);
+      max-width: 780px;
+      font-size: 18px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid var(--border);
+      color: var(--brown);
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    footer {
+      padding: 42px 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--brown); font-weight: 700; text-decoration: none; }
+
+    @media (max-width: 860px) {
+      .page { padding: 22px; }
+      header { align-items: flex-start; flex-direction: column; padding-bottom: 44px; }
+      nav { flex-wrap: wrap; }
+      .hero { grid-template-columns: 1fr; gap: 30px; padding-bottom: 48px; }
+      .grid { grid-template-columns: 1fr; padding-bottom: 46px; }
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <header>
+        <a class="brand" href="https://reshit.app" aria-label="Reshit official website">
+          <span class="mark">ר</span>
+          <span>Reshit</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="#features">Features</a>
+          <a href="#vision">Vision</a>
+          <a href="#technology">Technology</a>
+          <a href="https://github.com/NevoNadav/reshit-platform">GitHub</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div>
+          <span class="eyebrow">AI-Powered Jewish Digital Platform</span>
+          <h1>Jewish tradition, redesigned for the digital generation.</h1>
+          <p class="lead">Reshit brings prayer, Torah learning, halacha, zmanim, Jewish calendar tools and community features into one modern Hebrew-first digital platform.</p>
+          <div class="actions">
+            <a class="button primary" href="https://reshit.app">Visit Reshit</a>
+            <a class="button secondary" href="https://github.com/NevoNadav/reshit-platform">View on GitHub</a>
+          </div>
+        </div>
+
+        <aside class="panel" aria-label="Project summary">
+          <h2>One digital home for Jewish life.</h2>
+          <p>Built to connect ancient Jewish sources with modern AI, thoughtful design and practical daily tools.</p>
+          <div class="hebrew-card">
+            <strong>ראשית</strong>
+            <span>חזון יהודי לעולם מודרני.</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="features" class="grid" aria-label="Core features">
+        <article class="feature">
+          <h3>AI Jewish Assistant</h3>
+          <p>Guided Jewish learning, explanations and discovery powered by intelligent systems.</p>
+        </article>
+        <article class="feature">
+          <h3>Prayer & Siddur</h3>
+          <p>A modern prayer experience designed for clarity, personalization and daily use.</p>
+        </article>
+        <article class="feature">
+          <h3>Zmanim & Calendar</h3>
+          <p>Jewish times, calendar tools and location-based daily Jewish utilities.</p>
+        </article>
+        <article class="feature">
+          <h3>Torah & Halacha</h3>
+          <p>Digital access to Torah learning, halachic content and Jewish study tools.</p>
+        </article>
+        <article class="feature">
+          <h3>Hebrew RTL Design</h3>
+          <p>A Hebrew-first interface built for native RTL usage and clean accessibility.</p>
+        </article>
+        <article class="feature">
+          <h3>Community Tools</h3>
+          <p>Shared learning, Jewish insights, events and practical community features.</p>
+        </article>
+      </section>
+
+      <section id="vision" class="section">
+        <h2>A bridge between tradition and technology.</h2>
+        <p>Reshit was created to make Jewish knowledge, prayer and community services more accessible, understandable and useful through modern technology, AI-powered tools and high-quality user experience.</p>
+        <div class="tags">
+          <span class="tag">Jewish App</span>
+          <span class="tag">AI Jewish Platform</span>
+          <span class="tag">Digital Judaism</span>
+          <span class="tag">Torah Learning</span>
+          <span class="tag">Halacha Tools</span>
+          <span class="tag">Siddur</span>
+          <span class="tag">Zmanim</span>
+          <span class="tag">Hebrew RTL</span>
+        </div>
+      </section>
+
+      <section id="technology" class="section">
+        <h2>Built as a modern product.</h2>
+        <p>Reshit is developed with a mobile-first mindset, modern UI/UX principles, Hebrew RTL support and AI integrations. The project focuses on scalable Jewish digital infrastructure, not just another static content app.</p>
+      </section>
+
+      <footer>
+        <span>© Reshit. Founded by Nevo Nadav.</span>
+        <span><a href="https://reshit.app">reshit.app</a> · <a href="https://github.com/NevoNadav/reshit-platform">GitHub Repository</a></span>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
